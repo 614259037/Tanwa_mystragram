@@ -1,15 +1,49 @@
-<div class="row row-cols-1 row-cols-md-3">
-    {{#each restaurants}}
-    <div class="col mb-4">
-        <div class="container-sm">
-            <div class="card h-100">
-                <img src="{{this.imageURL}}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">{{this.name}}</h5>
-                    <p class="card-text">{{this.type}}</p>
-                </div>
+
+    <div align="right">
+        <button id="Setting" class="buttont">Setting</button>
+    </div>
+    <div id="Modal" class="modal">
+        <div class="modal-content">
+            <span class="close"></span>
+            <div class="controls">
+                <label for="spacing">Spacing:</label>
+                <input id="spacing" type="range" name="spacing" min="10" max="100" value="10" data-sizing="px" style="width: 350px;">
+                <label for="blur">Blur:</label>
+                <input id="blur" type="range" name="blur" min="0" max="25" value="0" data-sizing="px" style="width: 350px;">
+                <label for="base">Color:</label>
+                <input id="base" name="base" type="color" ; style="width: 70px; height: 50px;">
             </div>
         </div>
     </div>
-        {{/each}}
+    <script>
+        var modal = document.getElementById("Modal");
+        var btn = document.getElementById("Setting");
+        var span = document.getElementsByClassName("close")[0];
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <div class="head1">
+        <span>M</span>
+        <span>Y</span>
+        <span>S</span>
+        <span>T</span>
+        <span>R</span>
+        <span>A</span>
+        <span>G</span>
+        <span>R</span>
+        <span>A</span>
+        <span>M</span>
     </div>
+    <input type="text" name="search" class="search" placeholder="Search Photos">
+    <br></br>
+    <div class="gallery"></div>
+    <script src="./index.js"></script>

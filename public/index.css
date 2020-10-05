@@ -1,0 +1,211 @@
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        text-align: center;
+        background-color: antiquewhite;
+    }
+    
+    .head1 {
+        font-size: 75px;
+        font-family: Georgia;
+        padding: 40 px;
+        background-color: #411212;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-shadow: rgba(196, 100, 100, 0.959) 1px 3px 3px;
+        margin-top: 70px;
+    }
+    
+    .search {
+        font-size: 17px;
+        border: 0;
+        width: 30%;
+        height: 35px;
+        padding: 10px 10px;
+        background: white;
+        box-shadow: rgb(68, 31, 9) 3px 6px 15px;
+        margin: 70px auto;
+        border-radius: 10px;
+    }
+    
+    .search:hover {
+        box-shadow: rgb(122, 102, 92) 3px 6px 15px;
+    }
+    
+    input {
+        width: 370px;
+        padding: 10px 5px;
+        color: rgb(187, 167, 167);
+        border: 0;
+        background: transparent;
+        border-radius: 3px 0 0 3px;
+    }
+    
+    .searchbox {
+        width: 9%;
+        border: 0;
+        padding: 10px 10px;
+        background: rgb(214, 209, 209);
+        box-shadow: 0px 2px 5px;
+    }
+    
+    .gallery img {
+        margin: 10px;
+        border-radius: 10px;
+        padding: var(--spacing);
+        background: var(--base);
+        filter: blur(var(--blur));
+        border: 3px solid rgb(44, 20, 6);
+        box-shadow: rgb(71, 65, 58) 7px 7px 4px;
+    }
+    
+    .gallery img:hover {
+        box-shadow: rgb(75, 52, 27) 2px 5px 5px 4px;
+    }
+    
+     :root {
+        --base: #c9c1d1;
+        --spacing: 0px;
+        --blur: 0px;
+    }
+    
+    .controls {
+        font-family: 'Times New Roman', Times, serif;
+        text-align: left;
+    }
+    
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 50px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(177, 185, 228);
+        background-color: rgba(101, 108, 114, 0.555);
+    }
+    
+    .buttont {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 15px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #5870eb;
+        border: none;
+        border-radius: 15px;
+        box-shadow: rgb(67, 95, 177) 6px 6px 4px;
+    }
+    
+    .buttont:hover {
+        background-color: #7137ce;
+        box-shadow: rgb(55, 57, 177) 6px 6px 4px;
+    }
+    
+    @media only screen and (max-width: 600px) {
+        .head1 {
+            font-size: 35px;
+            padding: 10 px;
+            margin-top: 40px;
+        }
+        .gallery img {
+            margin: 10px;
+            border-radius: 10px;
+            max-width: 40%;
+            height: auto;
+        }
+        input {
+            width: 270px;
+            padding: 10px 5px;
+            border: 0;
+        }
+        .search {
+            font-size: 11px;
+            width: 50%;
+            height: 35px;
+            margin: 70px auto;
+        }
+    }
+    
+    @media only screen and (min-width: 600px) {
+        .head1 {
+            font-size: 45px;
+            padding: 20 px;
+            margin-top: 50px;
+        }
+        .gallery img {
+            margin: 10px;
+            border-radius: 10px;
+            max-width: 60%;
+            height: auto;
+        }
+        input {
+            width: 300px;
+            padding: 10px 5px;
+            border: 0;
+        }
+        .search {
+            font-size: 13px;
+            width: 50%;
+            height: 35px;
+            margin: 70px auto;
+        }
+    }
+    
+    @media only screen and (min-width: 768px) {
+        .head1 {
+            font-size: 55px;
+            padding: 30 px;
+            margin-top: 60px;
+        }
+        .gallery img {
+            margin: 10px;
+            border-radius: 10px;
+            max-width: 80%;
+            height: auto;
+        }
+        input {
+            width: 330px;
+            padding: 10px 5px;
+            border: 0;
+        }
+        .search {
+            font-size: 15px;
+            width: 50%;
+            height: 35px;
+            margin: 70px auto;
+        }
+    }
+    
+    @media only screen and (min-width: 992px) {
+        .head1 {
+            font-size: 65px;
+            padding: 40 px;
+            margin-top: 70px;
+        }
+        .gallery img {
+            margin: 10px;
+            border-radius: 10px;
+            max-width: 100%;
+            height: auto;
+        }
+        input {
+            width: 370px;
+            padding: 10px 5px;
+            border: 0;
+        }
+        .search {
+            font-size: 17px;
+            width: 50%;
+            height: 35px;
+            margin: 70px auto;
+        }
+    }
